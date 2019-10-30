@@ -92,7 +92,7 @@ public class NanoEngine
 
   private void appendTestInMethod(Method javaMethod, EngineDescriptor rootNode) {
     Class<?> declaringClass = javaMethod.getDeclaringClass();
-    if (isTestClass().test(declaringClass)) {
+    if (isTestMethod().test(javaMethod)) {
       final NanoEngineMethodTestDescriptor child = new NanoEngineMethodTestDescriptor(javaMethod, declaringClass,
                                                                                       rootNode.getUniqueId());
       rootNode.addChild(child);
