@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>2019-jfall-workshop</artifactId>
+    <groupId>org.rapidpm.event</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>2019-jfall-workshop-04-distributed-engine</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+<!--    <module>engine-cluster</module>-->
+<!--    <module>engine-master</module>-->
+<!--    <module>engine-shared</module>-->
+  </modules>
+
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.rapidpm.event</groupId>
+        <artifactId>2019-jfall-workshop-04-distributed-engine-shared</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.rapidpm.event</groupId>
+        <artifactId>2019-jfall-workshop-04-distributed-engine-cluster</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.rapidpm.event</groupId>
+        <artifactId>2019-jfall-workshop-04-distributed-engine-master</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.hazelcast</groupId>
+        <artifactId>hazelcast</artifactId>
+        <version>3.12</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.hazelcast</groupId>
+        <artifactId>hazelcast-client</artifactId>
+        <version>3.12</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+
+
+
+  </dependencies>
+
+</project>
