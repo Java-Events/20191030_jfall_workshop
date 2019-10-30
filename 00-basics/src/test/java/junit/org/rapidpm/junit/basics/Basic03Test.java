@@ -6,6 +6,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.Extensions;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
 public class Basic03Test {
   public static class MyExtensionA
       implements BeforeEachCallback {
@@ -26,6 +31,8 @@ public class Basic03Test {
     void test001() { }
   }
 
+  @Target({ ElementType.TYPE, ElementType.METHOD })
+  @Retention(RetentionPolicy.RUNTIME)
   @Extensions({
    @ExtendWith({Basic03Test.MyExtensionB.class}),
    @ExtendWith({Basic03Test.MyExtensionA.class})
